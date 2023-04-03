@@ -12,11 +12,11 @@ import java.util.List;
 public class Employer extends AbstractEntity {
 
     @OneToMany
-    @JoinColumn(name = "job_id")
+    @JoinColumn(name = "employer_id")
     private List<Job> jobs = new ArrayList<>();
 
     @NotNull
-    @Size(max = 100, min = 25, message = "Sorry entry must be between 25 and 100 characters long.")
+    @Size(max = 100, min = 5, message = "Sorry entry must be between 5 and 100 characters long.")
     private String location;
 
     public Employer() {
